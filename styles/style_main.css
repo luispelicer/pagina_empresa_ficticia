@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+:root{
+    --color_backgroung: #000;
+    --color_text: #ffffff;
+    --color_highlight: #7671d3;
+    --color_link-highlight: #101010;
+
+    --font_title: "Josefin Sans", sans-serif; /* weigh:400-900 italic:0-1 */
+    --font_text: "Playfair Display", serif; /* weigh:100-900 italic:0-1 */
+    --font_extra: "Montserrat", sans-serif; /* weigh:100-900 italic:0-1 */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.banner-tools{
+    height: 15vh;
+    width: 100vw;
+    background-color: var(--color_highlight);
+    position: fixed;
+}
+
+.banner-tools__linkbox{
+    height: 100%;
+    width: 100%;
+    margin-left: 15vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+}
+
+.banner-tools__linkbox__links{
+    color: var(--color_text);
+    font-size: 2.5rem;
+    font-family: var(--font_extra);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.banner-tools__linkbox__links:hover{
+    text-decoration: underline;
+}
+
+.principal{
+    width: 100vw;
+    background-color: var(--color_backgroung);
+}
+
+.principal__content{
+    padding: 15vh 15% 5% 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vh;
+    
+}
+
+.principal__content__title{
+    margin-top: 5%;
+    font-family: var(--font_title);
+    color: var(--color_text);
+    font-size: 2.5rem;
+
+    width: 100%;
+    text-align: left;
+}
+
+.principal__content__article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10%;
+}
+
+.principal__content__article__text{
+    width: 50%;
+    font-size: 2rem;
+    text-align: justify;
+    font-family: var(--font_text);
+    color: var(--color_text);
+}
+
+.highlightexth{
+    color: var(--color_highlight);
+}
+
+.principal__content__article__image{
+    width: 40%;
+    height:auto;
+}
+
+.principal__content__linkbox{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0vh;
+}
+
+.principal__content__linkbox__subtitle{
+    font-size: 1.5rem;
+    color: var(--color_text);
+    font-family: var(--font_title);
+    align-content: center;
+}
+
+.principal__content__linkbox__links{
+    width: 60%;
+
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.principal__content__linkbox__links__buttons{
+    width: calc(50% - 7.5vw);
+    height: 9vh;
+    padding: 5%;
+    margin: 5% 0%;
+    text-align: center;
+    
+    border: 0.5vw solid var(--color_highlight);
+    border-radius: 2vw;
+    
+    font-family: var(--font_extra);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--color_text);
+    
+    text-overflow: hidden;
+    overflow: clip;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2;
+
+}
+
+.principal__content__linkbox__links__buttons:hover{
+    background-color: var(--color_link-highlight);
+    color: var(--color_highlight);
+    transition: 0.16s;
+}
+
+.tagline-footer{
+    height: 5vh;
+    width: 100vw;
+
+    background-color: var(--color_highlight);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.3vw;
+}
+
+.tagline-footer__text{
+    padding-left: 2vw;
+    font-family: var(--font_extra);
+    font-size: 3vh;
+
+    color: var(--color_text);
+}
+
+
+
+@media (max-width: 900px){
+    .banner-tools__linkbox{
+        margin-left: 5vw;
+    }
+
+    .banner-tools__linkbox__links{
+        font-size: 2rem;
+    }
+
+    .principal__content{
+        padding: 15vh 5% 5% 5%;
+    }
+
+    .principal__content__title{
+        font-size: 1.5rem;
+    }
+
+    .principal__content__article{
+        flex-direction: column-reverse;
+    }
+
+    .principal__content__article__text{
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .principal__content__article__image{
+        width: 100%;
+    }
+
+    .principal__content__linkbox__links{
+        width: 100%;
+    }    
+
+    .principal__content__linkbox__links__buttons{
+        width: calc(42% - 7.5vw);
+        height: 9vh;
+        padding: 5%;
+        margin: 5% 0%;
+    }
+
+    .tagline-footer__text{
+        font-size: 1.5vh;
+    }
+}
